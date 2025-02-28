@@ -12,8 +12,8 @@ using TrilhaApiDesafio.Context;
 namespace TrilhaApiDesafio.Migrations
 {
     [DbContext(typeof(OrganizadorContext))]
-    [Migration("20250125183531_CriacaoTabelaTarefa")]
-    partial class CriacaoTabelaTarefa
+    [Migration("20250227225742_CriacaoTabelaContato")]
+    partial class CriacaoTabelaContato
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,12 +36,14 @@ namespace TrilhaApiDesafio.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Descricao")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("Titulo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

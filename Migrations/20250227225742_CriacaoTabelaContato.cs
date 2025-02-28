@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TrilhaApiDesafio.Migrations
 {
-    public partial class CriacaoTabelaTarefa : Migration
+    public partial class CriacaoTabelaContato : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,8 +15,8 @@ namespace TrilhaApiDesafio.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Titulo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Titulo = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Data = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false)
                 },

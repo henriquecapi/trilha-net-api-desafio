@@ -34,12 +34,14 @@ namespace TrilhaApiDesafio.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Descricao")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("Titulo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
